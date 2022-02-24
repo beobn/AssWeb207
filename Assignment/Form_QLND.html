@@ -311,8 +311,8 @@
             }
             $scope.onUpdate = function (index) {
                 const idud = $scope.listND[index].id;
-                const opdateAPI = url + '/' + idud;
-                $http.delete(deleteAPI, ndcp)
+                const updateAPI = url + '/' + idud;
+                $http.put(updateAPI, ndcp)
                     .then(function (response) {
                         $scope.listND.splice(index, 1);
                         alert("sua thanh cong");
